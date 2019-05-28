@@ -8,9 +8,11 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.Toast;
 
-import de.greenrobot.event.EventBus;
+import com.example.jh.eventbusdemo.event.MessageEvent;
+
+import org.greenrobot.eventbus.EventBus;
+
 
 /**
  * 作者：jinhui on 2017/3/23
@@ -25,7 +27,9 @@ public class SecondActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
+
         et_message = (EditText) findViewById(R.id.et_message);
+
         //发送消息
         findViewById(R.id.send).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,14 +55,13 @@ public class SecondActivity extends AppCompatActivity {
                 if (TextUtils.isEmpty(message)) {
                     message = "defaule message";
                     Log.e("send_broadcast", "message =" + message);
-                }else{
+                } else {
                     Intent intent = new Intent();
                     intent.setAction("message_broadcast");
                     intent.putExtra("message", message);
                     sendBroadcast(intent);
                 }
             }
-
         });
     }
 

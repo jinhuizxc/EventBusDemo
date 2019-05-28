@@ -7,17 +7,18 @@
     android:orientation="vertical"
     tools:context="com.example.jh.eventbusdemo.StickyModeActivity">
 
-    <Button
-        android:id="@+id/post"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Post"/>
 
     <Button
         android:id="@+id/register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Regist"/>
+
+    <Button
+        android:id="@+id/post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Post"/>
 
     <Button
         android:id="@+id/unregister"

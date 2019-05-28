@@ -1,4 +1,4 @@
-package com.example.jh.eventbusdemo;
+package com.example.jh.eventbusdemo.event;
 
 /**
  * 作者：jinhui on 2017/3/23
@@ -12,7 +12,7 @@ public class MessageEvent {
 
     private String message;
 
-    //构造方法中声明属性实例
+    // 构造方法中声明属性实例
     public MessageEvent(String message) {
         this.message = message;
     }
